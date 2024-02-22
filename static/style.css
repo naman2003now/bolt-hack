@@ -1,11 +1,84 @@
-.green{
-    background-color: green;
-}
-
-.red{
-    background-color: red;
-}
-
-.yellow{
-    background-color: yellow;
-}
+body {
+    font-family: Calibri, Arial, sans-serif; /* Change font to Calibri */
+    margin: 0;
+    padding: 0;
+    background-color: lightcyan;
+  }
+  
+  h1 {
+    text-align: center; /* Align the heading to the center */
+    font-size: 2em; /* Adjust font size relative to the body */
+    background-color: lightcoral; /* Faint background color for the h1 header */
+    padding: 20px 0; /* Add padding to the h1 header for spacing */
+    margin-bottom: 20px; /* Add margin to the bottom of the h1 header */
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ddd; /* Divider line */
+    margin: 20px 0; /* Add margin to the divider line */
+  }
+  
+  .container {
+    background-color: #f0f0f0; /* Light gray background color for the rest of the body */
+    padding: 20px; /* Add padding to the body content */
+  }
+  
+  table {
+    border: 2px solid black; /* Table border */
+    border-collapse: collapse; /* Required for uniform inner borders */
+    width: 750px; /* Set table width to 750px */
+    margin: 0 auto; /* Center align the table */
+  }
+  
+  th {
+    text-align: center;
+    background-color: #ffff99;
+    padding: 8px; /* Adjust padding if needed */
+    border: 1px solid black; /* Inner border */
+  }
+  
+  td {
+    padding: 8px; /* Adjust padding if needed */
+    border: 1px solid black; /* Inner border */
+  }
+  
+  .green {
+    background-color: lime !important;
+  }
+  
+  .yellow {
+    background-color: yellow !important;
+  }
+  
+  .red {
+    background-color: red !important;
+  }
+  
+  /* Styling for the legend */
+  .legend {
+    font-size: 0.8em; /* Adjust font size if needed */
+    margin-top: 20px; /* Add margin above the legend */
+    padding: 10px; /* Add padding to the legend */
+    border: 1px solid #ddd; /* Add a border to the legend */
+    border-radius: 5px; /* Add rounded corners to the legend */
+    font-size: medium;
+    font-weight: bold;
+  }
+  
+  .legend br {
+    margin: 5px 0; /* Add spacing between legend items */
+  }
+  
+  /* Styling to add colors within the legend */
+  .legend strong.color1 { 
+    color: lime;
+  }
+  
+  .legend strong.color2 { 
+    color: yellow;
+  }
+  
+  .legend strong.color3 { 
+    color: red;
+  }

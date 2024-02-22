@@ -9,6 +9,8 @@
     <title>Device Vulnarebility Report</title>
 </head>
 <body>
+  <h1>Network Level Consolidated Report</h1>
+  <hr>
     <table id="table">
         <tr>
           <th>Device Name</th>
@@ -17,6 +19,15 @@
           <th>Report generated time</th>
         </tr>
       </table>
+      <p class="legend">
+        *Risk Level Definitions*
+        <br>
+        * <strong class="color1">Green:</strong> No severity 1 or severity 2 findings in device configuration file.
+        <br>
+        * <strong class="color2">Yellow:</strong> One or more severity 3 findings, but no severity 1 or 2 findings in device configuration file.
+        <br>
+        * <strong class="color3">Red:</strong> One or more severity 1 or 2 findings in device configuration file.
+    </p>
       <script type="module" src="app.js"></script>
 </body>
 </html>
