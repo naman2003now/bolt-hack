@@ -1,0 +1,9 @@
+[
+    {
+        "ruleId": 0,
+        "rules": [{
+            "regex": "!\\.*username (.*) nopassword",
+            "max_matches": 0
+        }]
+    }
+]
