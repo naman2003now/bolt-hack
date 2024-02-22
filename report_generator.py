@@ -20,29 +20,29 @@ def create_script():
         output_file.write(file.read())
 
 def gen_report_txt(device_output):
-    device_output["timestamp"] = str(datetime.utcfromtimestamp(time.time()))
-    with open(os.path.join(f"Report", device_output["hostname"] + ".txt"), "w+") as file:
+    device_output['timestamp'] = str(datetime.utcfromtimestamp(time.time()))
+    with open(os.path.join(f"Report", device_output['hostname'] + ".txt"), "w+") as file:
         output = ""
-        output += f"Device name: {device_output["hostname"]} \n"
-        output += f"Report Generated @ {device_output["timestamp"]} \n\n"
-        output += f"Number of Severity 1 findings: {device_output["severities"][0]}\n" 
-        output += f"Number of Severity 2 findings: {device_output["severities"][1]}\n"
-        output += f"Number of Severity 3 findings: {device_output["severities"][2]}\n\n"
+        output += f"Device name: {device_output['hostname']} \n"
+        output += f"Report Generated @ {device_output['timestamp']} \n\n"
+        output += f"Number of Severity 1 findings: {device_output['severities'][0]}\n" 
+        output += f"Number of Severity 2 findings: {device_output['severities'][1]}\n"
+        output += f"Number of Severity 3 findings: {device_output['severities'][2]}\n\n"
         output += "Report:\n\n"
-        for report in device_output["report"]:
-            output += f"#{report["ruleId"]}\n"
-            output += f"Severity: {report["severity"]}\n"
-            output += f"Description: {report["description"]}\n\n"
+        for report in device_output['report']:
+            output += f"#{report['ruleId']}\n"
+            output += f"Severity: {report['severity']}\n"
+            output += f"Description: {report['description']}\n\n"
         file.write(output)
 
 def gen_report_json(analyser_output):
     output = []
     for device_output in analyser_output:
         output.append({
-            "hostname": device_output["hostname"],
-            "risk": device_output["risk"],
-            "report_url": f"{device_output["hostname"]}.txt",
-            "timestamp": device_output["timestamp"]
+            "hostname": device_output['hostname'],
+            "risk": device_output['risk'],
+            "report_url": f"{device_output['hostname']}.txt",
+            "timestamp": device_output['timestamp']
         })
     json.dump(output, open(os.path.join("Report", "output.json"), "w+"))
             
