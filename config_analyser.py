@@ -1,12 +1,13 @@
 import re
-from rules import rule_1,rule_2,rule_12,rule_13,rule_6
+from rules import rule_1,rule_2,rule_12,rule_13,rule_6,rule_3
 
 rules = [
     rule_1,
     rule_2,
+    rule_3,
+    rule_6,
     rule_12,
     rule_13,
-    rule_6
 ]
 
 def get_hostname(raw_config):

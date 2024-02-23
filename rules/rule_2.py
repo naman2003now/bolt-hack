@@ -22,9 +22,9 @@ def load_password_policy(password_policy):
     with open(password_policy) as f:
         return json.load(f)
 
-def check_weak_password(password,policy):
+def check_weak_password(password, policy):
     if min(map(len, password)) < policy["minLength"]:
-        return False
+        return output
     # if(uppercase.search(password)=="None"):
     #     return False
     # if(lowercase.search(password)=="None"):
@@ -34,14 +34,11 @@ def check_weak_password(password,policy):
     # if(special_characters.search(password)=="None"):
     #     return False
     
-    return True
+    return None
 
 policy = load_password_policy("password.json")
 
 
 def analyse(raw_text):
     matches = re.findall("password [0-9|\s]{0,2}(.*)\\\\", raw_text)
-    if check_weak_password(matches,load_password_policy("password.json")):
-        return None
-    return output
-    
+    return check_weak_password(matches, load_password_policy("password.json"))
