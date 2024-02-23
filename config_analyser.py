@@ -1,13 +1,17 @@
 import re
-from rules import rule_1,rule_2,rule_12,rule_13,rule_6,rule_3
+from rules import rule_1,rule_2,rule_12,rule_13,rule_6,rule_3,rule_5,rule_8,rule_9,rule_4
 
 rules = [
     rule_1,
     rule_2,
     rule_3,
+    rule_4,
     rule_6,
     rule_12,
     rule_13,
+    rule_5,
+    rule_8,
+    rule_9,
 ]
 
 def get_hostname(raw_config):
@@ -25,7 +29,7 @@ def analyse(filePath):
         rule_output = rule.analyse(raw)
         if rule_output: 
             report.append(rule_output)
-            severities[rule_output["severity"] - 1] =+ 1
+            severities[rule_output["severity"] - 1] += 1
     
     hostname = get_hostname(raw)
     risk = "green"

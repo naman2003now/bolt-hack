@@ -8,7 +8,7 @@ uppercase = re.compile("[A-Z]+")
 lowercase = re.compile("[a-z]+")
 numbers = re.compile("[0-9]+")
 special_characters = re.compile("[^a-zA-Z0-9]+")
-#passsword_check = re.compile("[a-z][A-Z][0-9][^a-zA-Z0-9]+")
+passsword_check = re.compile("[a-z][A-Z][0-9][^a-zA-Z0-9]+")
 
 output = {
     "ruleId" : 2,
